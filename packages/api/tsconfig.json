@@ -111,13 +111,13 @@
       "dom",
       "ESNext",
     ],
-//    "include": [
-//        "./src/**/*",
-//    ],
-//    "include": ["./src/**/*.ts", "./src/**/*.tsx"],
-//    "exclude": ["./node_modules"],
 //    "paths": {
 //      "src/*": ["./src/*"]
 //    }
-  }
+  },
+//  "include": [
+//      "./src/**/*",
+//  ]
+//  "include": ["./src/**/*.ts", "./src/**/*.tsx"],
+//  "exclude": ["./node_modules"],
 }

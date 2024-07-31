@@ -6,6 +6,7 @@
   "main": "index.js",
   "scripts": {
     "build:api": "pnpm --filter @typescript-with-esm/api run build:tsc",
+    "start:api": "pnpm --filter @typescript-with-esm/api run start:prod",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],

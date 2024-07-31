@@ -40,8 +40,8 @@ jobs:
 
     - name: Build
       run: |
-        pnpm run build:tsc
+        pnpm run build:api
 
     - name: Run
       run: |
-        pnpm run start:prod
+        pnpm run start:api

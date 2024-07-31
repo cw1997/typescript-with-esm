@@ -4,7 +4,8 @@
   "description": "",
   "type": "module",
   "scripts": {
-    "start:tsx": "tsx watch --es-module-specifier-resolution=node -r tsconfig-paths/register ./src/main.ts",
+    "start:tsx-watch": "tsx watch --es-module-specifier-resolution=node -r tsconfig-paths/register ./src/main.ts",
+    "start:tsx": "tsx --es-module-specifier-resolution=node -r tsconfig-paths/register ./src/main.ts",
     "build:tsc": "tsc --build",
     "start:prod": "node -r tsconfig-paths/register ./dist/src/main.js",
     "prestart:prod": "rm -rf dist && tsc",

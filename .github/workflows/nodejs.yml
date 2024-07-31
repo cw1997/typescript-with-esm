@@ -17,12 +17,6 @@ jobs:
     steps:
     - uses: actions/checkout@v4
 
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v4
-      with:
-        node-version: ${{ matrix.node-version }}
-        cache: 'pnpm'
-
     - name: Setup pnpm
       # You may pin to the exact commit or the version.
       # uses: pnpm/action-setup@fe02b34f77f8bc703788d5817da081398fad5dd2
@@ -41,6 +35,12 @@ jobs:
         # package_json_file: # optional, default is package.json
         # When set to true, @pnpm/exe, which is a Node.js bundled package, will be installed, enabling using pnpm without Node.js.
         # standalone: # optional, default is false
+
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v4
+      with:
+        node-version: ${{ matrix.node-version }}
+        cache: 'pnpm'
 
     - name: Build
       run: |

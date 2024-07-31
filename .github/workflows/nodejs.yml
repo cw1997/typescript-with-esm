@@ -21,6 +21,7 @@ jobs:
       uses: actions/setup-node@v4
       with:
         node-version: ${{ matrix.node-version }}
+        cache: 'pnpm'
 
     - name: Setup pnpm
       # You may pin to the exact commit or the version.
@@ -33,6 +34,9 @@ jobs:
         # dest: # optional, default is ~/setup-pnpm
         # If specified, run `pnpm install`
         # run_install: # optional, default is null
+        run_install: |
+          - recursive: true
+            args: [--frozen-lockfile]
         # File path to the package.json to read "packageManager" configuration
         # package_json_file: # optional, default is package.json
         # When set to true, @pnpm/exe, which is a Node.js bundled package, will be installed, enabling using pnpm without Node.js.

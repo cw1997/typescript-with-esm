@@ -1,12 +1,5 @@
 {
   "$schema": "https://json.schemastore.org/tsconfig",
-  "extends": [
-    "@tsconfig/node20/tsconfig.json",
-    "@tsconfig/strictest/tsconfig.json",
-  ],
-  "ts-node": {
-    "esm": true, // «———— enabling ESM for ts-node
-  },
   "compilerOptions": {
     /* Visit https://aka.ms/tsconfig to read more about this file */
 
@@ -33,7 +26,7 @@
     // "moduleDetection": "auto",                        /* Control what method is used to detect module-format JS files. */
 
     /* Modules */
-    "module": "ESNext",                                /* Specify what module code is generated. */
+    "module": "NodeNext",                                /* Specify what module code is generated. */
     "rootDir": ".",                                  /* Specify the root folder within your source files. */
     "moduleResolution": "NodeNext",                     /* Specify how TypeScript looks up a file from a given module specifier. */
     "baseUrl": ".",                                  /* Specify the base directory to resolve non-relative module names. */
@@ -116,13 +109,15 @@
     /* Skip type checking all .d.ts files. */
     "lib": [
       "dom",
-      "es2021",
-      "es2022",
+      "ESNext",
     ],
-    "include": ["./src/**/*.ts", "./src/**/*.tsx"],
-    "exclude": ["./node_modules"],
-    "paths": {
-      "@/*": ["./src/*"]
-    }
+//    "include": [
+//        "./src/**/*",
+//    ],
+//    "include": ["./src/**/*.ts", "./src/**/*.tsx"],
+//    "exclude": ["./node_modules"],
+//    "paths": {
+//      "src/*": ["./src/*"]
+//    }
   }
 }

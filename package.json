@@ -5,6 +5,7 @@
   "type": "module",
   "main": "index.js",
   "scripts": {
+    "build:api": "pnpm --filter @typescript-with-esm/api run build:tsc",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],

@@ -42,10 +42,6 @@ jobs:
         node-version: ${{ matrix.node-version }}
         cache: 'pnpm'
 
-    - name: Dev
-      run: |
-        pnpm run dev:api
-
 #     - name: Build
 #       run: |
 #         pnpm run build:api
@@ -53,3 +49,8 @@ jobs:
     - name: Run
       run: |
         pnpm run start:api
+
+    - name: Dev
+      run: |
+        pnpm run dev:api
+      timeout-minutes: 1

@@ -46,9 +46,9 @@ jobs:
       run: |
         pnpm run dev:api
 
-    - name: Build
-      run: |
-        pnpm run build:api
+#     - name: Build
+#       run: |
+#         pnpm run build:api
 
     - name: Run
       run: |

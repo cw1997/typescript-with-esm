@@ -5,10 +5,8 @@
   "type": "module",
   "main": "index.js",
   "scripts": {
-    "dev:api": "pnpm --filter @typescript-with-esm/api run start:tsx",
-    "build:api": "pnpm --filter @typescript-with-esm/api run build:tsc",
-    "start:api": "pnpm --filter @typescript-with-esm/api run start:prod",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev:api": "pnpm --filter @typescript-with-esm/api run dev",
+    "dev:common": "pnpm --filter @typescript-with-esm/common run dev"
   },
   "keywords": [],
   "author": "",

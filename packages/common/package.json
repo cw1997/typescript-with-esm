@@ -1,0 +1,29 @@
+
+{
+  "name": "@typescript-with-esm/common",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "exports": "./dist/esm/index.js",
+  "types": "./dist/esm/index.d.ts",
+  "scripts": {
+    "dev": "webpack --watch --mode development",
+    "build": "webpack --progress --mode production",
+    "upgrade": "pnpm dlx npm-check-updates -i"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+  },
+  "devDependencies": {
+    "@types/node": "^22",
+    "ts-loader": "^9.5.1",
+    "typescript": "^5.7.2",
+    "webpack": "5.97.1",
+    "webpack-cli": "5.1.4"
+  }
+}

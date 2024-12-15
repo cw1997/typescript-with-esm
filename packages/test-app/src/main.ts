@@ -1,4 +1,4 @@
-import {utils} from "@cw1997/test-package"
+import {utils} from "@cw1997/test-lib"
 
 // import * as common from "@typescript-with-esm/common"
 

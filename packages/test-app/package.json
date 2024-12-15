@@ -9,15 +9,21 @@
     "url": "https://www.changwei.me/"
   },
   "type": "module",
+  "module": "./dist/esm/index.js",
+  "exports": "./dist/esm/index.js",
+  "types": "./dist/esm/index.d.ts",
   "license": "UNLICENSED",
   "scripts": {
-    "dev": "tsx watch --enable-source-maps ./src/main.ts",
+    "start": "node ./dist/esm/index.js",
+    "dev:tsx": "tsx watch --enable-source-maps ./src/main.ts",
     "dev:webpack": "webpack --watch --mode development",
-    "build": "webpack --progress --mode production",
+    "dev:rollup": "rollup -c -w --bundleConfigAsCjs",
+    "build:webpack": "webpack --progress --mode production",
+    "build:rollup": "rollup -c --sourcemap --bundleConfigAsCjs",
     "upgrade": "pnpx npm-check-updates -i"
   },
   "dependencies": {
-    "@cw1997/test-package": "workspace:*"
+    "@cw1997/test-lib": "workspace:*"
   },
   "devDependencies": {
     "@types/node": "^22",
@@ -29,7 +35,10 @@
     "jest": "^29.7.0",
     "prettier": "^3.4.2",
     "rimraf": "^6.0.1",
+    "rollup": "4.28.1",
     "ts-loader": "^9.5.1",
+    "ts-node": "10.9.2",
+    "tslib": "2.8.1",
     "tsx": "^4.19.2",
     "typescript": "^5.7.2",
     "webpack": "5.97.1",

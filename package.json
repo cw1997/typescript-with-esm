@@ -4,6 +4,7 @@
   "description": "",
   "packageManager": "pnpm@9.15.0",
   "scripts": {
+    "start": "pnpm --filter @cw1997/test-app run start",
     "build:webpack":  "turbo run build:webpack",
     "build:rollup": "turbo run build:rollup",
     "test": "echo \"Error: no test specified\" && exit 1"

@@ -8,11 +8,11 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: [ "ubuntu-latest" ]
 
     strategy:
       matrix:
-        node-version: [18.x, 20.x, 22.x]
+        node-version: [ "22.11.0" ]
 
     steps:
     - uses: actions/checkout@v4
@@ -23,7 +23,7 @@ jobs:
       uses: pnpm/action-setup@v4.0.0
       with:
         # Version of pnpm to install
-        version: 9.6.0 # optional
+        version: 9.15.0 # optional
         # Where to store pnpm files
         # dest: # optional, default is ~/setup-pnpm
         # If specified, run `pnpm install`
@@ -42,14 +42,10 @@ jobs:
         node-version: ${{ matrix.node-version }}
         cache: 'pnpm'
 
-    - name: Dev
-      run: |
-        pnpm run dev:api
-
     - name: Build
       run: |
-        pnpm run build:api
+        pnpm run build:webpack
 
     - name: Run
       run: |
-        pnpm run start:api
+        pnpm run start

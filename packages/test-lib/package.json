@@ -19,7 +19,7 @@
   "scripts": {
     "dev:webpack": "webpack --watch --mode development",
     "dev:rollup": "rollup -c -w --bundleConfigAsCjs",
-    "build:webpack": "webpack --progress --mode production",
+    "build:webpack": "webpack --mode production",
     "build:rollup": "rollup -c --sourcemap --bundleConfigAsCjs",
     "upgrade": "pnpx npm-check-updates -i"
   },

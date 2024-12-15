@@ -15,6 +15,7 @@
   "exports": "./dist/esm/index.js",
   "types": "./dist/esm/index.d.ts",
   "license": "UNLICENSED",
+  "packageManager": "pnpm@9.15.0",
   "scripts": {
     "dev:webpack": "webpack --watch --mode development",
     "dev:rollup": "rollup -c -w --bundleConfigAsCjs",

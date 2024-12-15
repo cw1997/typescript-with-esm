@@ -2,12 +2,10 @@
   "name": "typescript-with-esm",
   "version": "1.0.0",
   "description": "",
-  "type": "module",
-  "main": "index.js",
+  "packageManager": "pnpm@9.15.0",
   "scripts": {
-    "dev:api": "pnpm --filter @typescript-with-esm/api run start:tsx",
-    "build:api": "pnpm --filter @typescript-with-esm/api run build:tsc",
-    "start:api": "pnpm --filter @typescript-with-esm/api run start:prod",
+    "build:webpack":  "turbo run build:webpack",
+    "build:rollup": "turbo run build:rollup",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -15,5 +13,8 @@
   "license": "ISC",
   "engines": {
     "node": ">=18"
+  },
+  "devDependencies": {
+    "turbo": "^2.3.3"
   }
 }

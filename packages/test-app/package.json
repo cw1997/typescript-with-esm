@@ -13,6 +13,7 @@
   "exports": "./dist/esm/index.js",
   "types": "./dist/esm/index.d.ts",
   "license": "UNLICENSED",
+  "packageManager": "pnpm@9.15.0",
   "scripts": {
     "start": "node ./dist/esm/index.js",
     "dev:tsx": "tsx watch --enable-source-maps ./src/main.ts",

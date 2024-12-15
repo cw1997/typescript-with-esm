@@ -1,0 +1,19 @@
+{
+  "$schema": "https://turbo.build/schema.json",
+  "tasks": {
+    "build:webpack": {
+      "dependsOn": ["^build:webpack"],
+      "outputs": ["dist/**"]
+    },
+    "build:rollup": {
+      "dependsOn": ["^build:rollup"],
+      "outputs": ["dist/**"]
+    },
+    "dev": {
+      "persistent": true,
+      "cache": false
+    }
+  },
+  "globalDependencies": [".env", "tsconfig.json"],
+  "globalEnv": ["NODE_ENV"]
+}
